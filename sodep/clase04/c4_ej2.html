@@ -1,0 +1,26 @@
+<html>
+  <head>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script >
+          function forEach(list,callback) {
+            for (var n = 0; n < list.length; n++) {
+                callback.call(list[n],n);
+            }
+          }
+          
+          $(document).ready(
+              function(){
+                var laListaNegra=['Lili','Masa','Gaby'];
+                forEach(laListaNegra,function(index){
+                    console.log(index + ' ' + this);                    
+                });
+              }
+            );
+     </script>
+
+  </head>
+  <body>
+   Ejemplo que muestra invocación de funciones
+  </body>
+</html>

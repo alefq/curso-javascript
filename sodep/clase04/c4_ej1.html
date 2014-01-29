@@ -1,0 +1,40 @@
+<html>
+  <head>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script >
+          var gpp=function(nombre){
+            this.nombre=nombre;  
+          };
+          $(document).ready(
+              function(){
+                //1) Invocación como una función
+                gpp('Guille Papa');
+                console.log('Function: ' + window.nombre);//Imprime Guille Papa
+                
+                //2) Invocación como un objeto
+                var o={};
+                o.mGpp=gpp;
+                o.mGpp('Guille Papa');
+                console.log('Metodo: ' + o.nombre);//Imprime Guille Papa
+                
+                //3) Invocación como un constructor
+                var guille=new gpp('Guille Papa');
+                console.log('Constructor: '+guille.nombre);//Imprime Guille Papa
+                
+                //4) Usando apply
+                var o2={};
+                //Notar que o2 no tiene el metodo gpp
+                gpp.apply(o2,['Guille Papa']);
+                console.log('Apply: '+o2.nombre);//Imprime Guille Papa
+                console.log('o2.gpp: '+o2.gpp);//Imprime undefined
+                
+              }
+            );
+     </script>
+
+  </head>
+  <body>
+   Ejemplo que muestra invocación de funciones
+  </body>
+</html>

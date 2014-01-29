@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title></title>
+		<style>
+			.error {
+				color: #8A1F11;
+				background: none repeat scroll 0 0 #FBE3E4;
+			}
+		</style>
+		<script type="text/javascript" src="../lib/jquery.js"></script>
+		<script type="text/javascript" src="afeltes.js"></script>
+		<script type="text/javascript" src="../lib/jquery.validate.min.js"></script>
+	</head>
+	<body>
+		<div id="errorDiv"  class="errorDiv"></div>
+		<form action="" method="get" id="form">
+			Email:
+			<input id="email" name="email" type="text" />
+			<br />
+			Password:
+			<input id="password" name="password"  type="password" />
+			<br />
+			Password (again):
+			<input id="password2"  name="password2" type="password" />
+			<br />
+			I agree to the terms and conditions:
+			<input id="terms" class="checkbox" type="checkbox" name="terms" title="Debe aceptar los términos de la licencia" required minlength="1"/>
+			<br />
+			<br />
+			<input id="submitbutton" type="submit" value="Submit" />
+			<input id="borrarMensajes" type="button" name="button" value="Mostrar errores"/>
+			<input id="mostrarMensajes" type="button" name="buttonMostrar" value="Borrar errores"/>
+
+		</form>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src="../lib/jquery.js"></script>
+		<script src="afeltes.js"></script>
+		<script >
+			// A $( document ).ready() block.
+			$(document).ready(function() {
+				console.log("ready!");
+				prepareTable();
+			});
+		</script>
+
+	</head>
+	<body>
+
+		<div>
+			<input type="text" id="nombreText" />
+			<input type="text" id="apellidoText"  />
+			<input type="button" id="agregarBtn"  value="Agregar" />
+		</div>
+
+		<div>
+			<table id="personas1Table" ></table>
+			<table id="personas2Table" ></table>
+
+		</div>
+	</body>
+</html>
